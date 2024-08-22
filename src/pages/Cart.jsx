@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useContext } from "react";
+import Cartitem from "../components/Cartitem/Cartitem";
+import { ShopContext } from "../context/ShopContext";
 
 const Cart = () => {
-  return (
-    <div>Cart</div>
-  )
-}
+const {all_product ,addToCart,removeFromCart}=useContext(ShopContext)
 
-export default Cart
+  return (
+    <div>
+      <Cartitem />
+    </div>
+  );
+};
+
+export default Cart;
