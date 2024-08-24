@@ -2,12 +2,14 @@
   display: flex;
   justify-content: space-between;
   max-width: 82%;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 0px 170px;
+  margin: 0px auto;
   /* margin-top: 5px;
   margin-bottom: 5px; */
 }
-
+.nav-list li Link {
+  color: black;
+}
 .nav-logo img {
   width: 50px;
 }
@@ -76,4 +78,17 @@
   margin-top: -30px;
   color: white;
   border-radius: 10px;
+}
+
+@media (max-width: 1280px) {
+  .Navbar {
+    padding: 0px 130px;
+  }
+}
+
+@media (max-width: 1020px) {
+  
+  .Navbar {
+    padding: 0px 80px;
+  }
 }
