@@ -1,9 +1,9 @@
 .Navbar {
   display: flex;
   justify-content: space-between;
-  max-width: 82%;
+  max-width: 100%;
   padding: 0px 170px;
-  margin: 0px auto;
+  /* margin: 0px auto; */
   /* margin-top: 5px;
   margin-bottom: 5px; */
 }
@@ -80,7 +80,7 @@
   border-radius: 10px;
 }
 
-@media (max-width: 1280px) {
+/* @media (max-width: 180px) {
   .Navbar {
     padding: 0px 130px;
   }
@@ -91,4 +91,40 @@
   .Navbar {
     padding: 0px 80px;
   }
+} */
+
+
+
+@media (max-width: 1399.98px) {
+    /* CSS styles for extra large devices */
+
+    .Navbar{
+      padding: 0px 120px;
+    }
+  }
+  
+  /* Large devices (desktops, 992px to 1199.98px) */
+  @media (max-width: 1199.98px) {
+    /* CSS styles for large devices */
+    .Navbar{
+      padding: 0px 100px;
+    }
+  }
+  
+  /* Medium devices (tablets, 768px to 991.98px) */
+  @media (max-width: 991.98px) {
+    /* CSS styles for medium devices */
+    .Navbar{
+      padding: 0px 70px;
+    }
+}
+
+/* Small devices (landscape phones, 576px to 767.98px) */
+@media (max-width: 767.98px) {
+    /* CSS styles for small devices */
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    /* CSS styles for extra small devices */
 }
