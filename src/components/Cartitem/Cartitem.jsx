@@ -4,7 +4,7 @@ import remove_icon from "../Assets/cart_cross_icon.png";
 import { ShopContext } from "../../context/ShopContext";
 
 const Cartitem = () => {
-  const { all_product, cartItem, addToCart, removeFromCart } =
+  const { getTotalAmount, all_product, cartItem, addToCart, removeFromCart } =
     useContext(ShopContext);
   console.log(cartItem, "as");
   return (
@@ -49,36 +49,36 @@ const Cartitem = () => {
       })}
 
       <div className="cart-billing">
-      <div className="cart-down">
-        <h2>Cart Totals</h2>
-        <div>
-          <div className="cart-totals">
-            <p>Subtotal</p>
-            <p>${0}</p>
+        <div className="cart-down">
+          <h2>Cart Totals</h2>
+          <div>
+            <div className="cart-totals">
+              <p>Subtotal</p>
+              <p>${getTotalAmount()}</p>
+            </div>
+            <hr />
+            <div className="cart-totals">
+              <p>Shipping Fee</p>
+              <p>Free Shipping</p>
+            </div>
+            <hr />
+            <div className="cart-totals">
+              <h3>Total</h3>
+              <h3>${getTotalAmount()}</h3>
+            </div>
           </div>
-          <hr />
-          <div className="cart-totals">
-            <p>Shipping Fee</p>
-            <p>Free Shipping</p>
-          </div>
-          <hr />
-          <div className="cart-totals">
-            <h3>Total</h3>
-            <h3>${0}</h3>
-          </div>
+          <button className="cart-proceed">
+            <b>Proceed TO Checkouts</b>
+          </button>
         </div>
-        <button className="cart-proceed"><b>Proceed TO Checkouts</b></button>
-      </div>
 
-      <div className="cart-promocode">
-        <p>If you have a promo code, Enter it here</p>
-        <div className="cart-promo">
-          <input type="text" placeholder="Promo Code" />
-            {" "}
-          
-          <button className="promo-btn">Submit</button>
+        <div className="cart-promocode">
+          <p>If you have a promo code, Enter it here</p>
+          <div className="cart-promo">
+            <input type="text" placeholder="Promo Code" />{" "}
+            <button className="promo-btn">Submit</button>
+          </div>
         </div>
-      </div>
       </div>
     </div>
   );

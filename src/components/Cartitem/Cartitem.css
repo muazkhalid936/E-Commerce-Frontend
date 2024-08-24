@@ -79,4 +79,9 @@
   border: none;
   color: white;
   margin-left: -10px;
+  cursor: pointer;
+}
+.cart-remove {
+  cursor: pointer;
+  margin-left: 25px;
 }
