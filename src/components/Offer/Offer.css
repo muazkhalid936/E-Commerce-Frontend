@@ -12,16 +12,48 @@
 
 .offer-left {
   flex: 1;
+  margin-top: 20px;
   padding-left: 10%;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-.offer-right img {
-  width: 200px;
+.offer-left p {
+  font-size: 20px;
+  margin: 0px;
+  font-weight: bold;
 }
-.offer-left button{
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 10px 30px 10px;
-    border-radius: 25px;
+.offer-right img {
+  width: 180px;
+  height: 60vh;
+}
+.offer-left button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  width: 120px;
+}
+
+@media (max-width: 600px) {
+  .offer-right img {
+    height: 20vh;
+    width: 140px;
+  }
+  .offer {
+    height: 20vh;
+  }
+  .offer-left p {
+    font-size: 10px;
+  }
+  .offer-left {
+    gap: 2px;
+  }
+  .offer-left button {
+    padding: 5px 5px;
+    font-size: 10px;
+    width: 70px;
+  }
 }

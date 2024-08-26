@@ -146,7 +146,7 @@
 
 @media (max-width: 600px) {
   .Hero {
-    height: 40vh;
+    height: 30vh;
   }
   .hero-right img {
     height: 30vh;

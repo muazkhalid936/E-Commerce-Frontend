@@ -30,6 +30,24 @@
   transform: scale(1.05);
 }
 
+@media (max-width:1080px){
+
+  .item {
+    width: 200px;
+  }
+  .item img {
+    width: 180px;
+  }
+  .item p {
+    font-size: 15px;
+  }
+  .new_price,
+  .old_price {
+    font-size: 20px;
+  }
+
+}
+
 @media (max-width: 600px) {
   .item {
     width: 120px;

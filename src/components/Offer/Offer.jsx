@@ -5,10 +5,11 @@ const Offer = () => {
   return (
     <div className="offer">
       <div className="offer-left">
-        <h1>Exclusive</h1>
-        <h1>Offers For You</h1>
+        {" "}
+        <p>Exclusive</p>
+        <p>Offers For You</p>
         <p>ONLY ON BEST SELLERS PRODUCTS</p>
-        <button>Chect Now</button>
+        <button className="check">Chect Now</button>
       </div>
 
       <div className="offer-right">
