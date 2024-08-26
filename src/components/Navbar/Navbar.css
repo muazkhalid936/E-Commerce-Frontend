@@ -208,8 +208,6 @@
   }
 }
 
-
-
 /* Small devices (landscape phones, 576px to 767.98px) */
 @media (max-width: 800px) {
   /* CSS styles for small devices */
@@ -239,9 +237,4 @@
   .nav-logo p {
     font-size: 20px;
   }
-}
-
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
-  /* CSS styles for extra small devices */
 }

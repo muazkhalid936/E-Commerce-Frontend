@@ -39,10 +39,10 @@
   .popular {
     padding: 0px 0px;
   }
-  .popular-item{
+  .popular-item {
     padding: 0px 50px;
   }
-  .popular-line{
+  .popular-line {
     width: 100px;
   }
 }
@@ -52,6 +52,6 @@
     font-size: 20px;
   }
   .popular-line {
-    width: 50px;
+    width: 100px;
   }
 }
