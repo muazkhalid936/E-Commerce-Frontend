@@ -6,7 +6,7 @@ const NewCollection = () => {
   return (
     <div className="popular">
       <h1>New Collection</h1>
-      <hr />
+      <hr className="line" />
 
       <div className="popular-item">
         {new_collection.map((item, i) => {

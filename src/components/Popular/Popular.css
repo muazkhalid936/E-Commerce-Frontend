@@ -8,6 +8,7 @@
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
   padding: 0px 150px;
 }
 .popular .head {
@@ -15,10 +16,10 @@
   font-weight: 600;
   margin-bottom: 0px;
 }
-.popular hr {
+.popular-line {
   width: 300px;
   font-weight: bold;
-  height: 6px;
+  height: 1px;
   /* border-width: 10px; */
   border: 2px solid black;
   border-radius: 50px;
@@ -35,7 +36,16 @@
   .popular .head {
     font-size: 30px;
   }
-.popular{
-padding: 0px 0px;
+  .popular {
+    padding: 0px 0px;
+  }
 }
+
+@media (max-width: 350px) {
+  .popular .head {
+    font-size: 20px;
+  }
+  .popular-line {
+    width: 50px;
+  }
 }
