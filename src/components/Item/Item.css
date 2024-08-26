@@ -1,6 +1,7 @@
 .item {
   width: 260px;
   transition: 0.5s;
+  margin: 0px auto;
 }
 .price {
   display: flex;

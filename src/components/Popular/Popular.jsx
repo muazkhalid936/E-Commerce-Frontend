@@ -5,7 +5,7 @@ import "./Popular.css";
 const Popular = () => {
   return (
     <div className="popular">
-      <h1>Popular in Women</h1>
+      <p className="head">Popular in Women</p>
       <hr />
 
      <div className="popular-item">
