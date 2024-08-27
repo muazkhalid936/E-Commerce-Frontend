@@ -4,11 +4,11 @@ import new_collection from "../Assets/new_collections";
 import Item from "../Item/Item";
 const NewCollection = () => {
   return (
-    <div className="popular">
+    <div className="collection">
       <h1>New Collection</h1>
-      <hr className="line" />
+      <hr />
 
-      <div className="popular-item">
+      <div className="collection-item">
         {new_collection.map((item, i) => {
           return (
             <Item

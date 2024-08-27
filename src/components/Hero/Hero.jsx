@@ -20,7 +20,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="collection">
+        <div className="collection-btn">
           <p>Latest Collections</p>
           <img src={arrow} alt="123123" className="arrow" />
         </div>

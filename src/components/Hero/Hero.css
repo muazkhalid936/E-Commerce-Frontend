@@ -25,7 +25,7 @@
   font-size: 20px;
 }
 
-.collection {
+.collection-btn {
   display: flex;
   width: 210px;
   gap: 10px;
@@ -35,10 +35,10 @@
   align-items: center;
   background-color: red;
 }
-.collection img:hover {
+.collection-btn img:hover {
   margin-left: 20px;
 }
-.collection img {
+.collection-btn img {
   width: 30px;
   transition: 0.5s;
   height: 20px;
@@ -69,10 +69,10 @@
     font-size: 40px;
   }
 
-  .hero-right img{
+  .hero-right img {
     height: 50vh;
   }
-  .Hero{
+  .Hero {
     height: 60vh;
   }
 }
@@ -86,7 +86,7 @@
     width: 40px;
     height: 40px;
   }
-  .collection {
+  .collection-btn {
     font-size: 14px;
     width: 180px;
     margin-top: 30px;
@@ -94,7 +94,7 @@
   .hero-left {
     margin-left: 50px;
   }
-  .collection img {
+  .collection-btn img {
     width: 25px;
   }
   .hero-right img {
@@ -106,11 +106,11 @@
   }
 }
 
-@media(max-width:900px) {
-  .hero-right img{
-    height:50vh;
+@media (max-width: 900px) {
+  .hero-right img {
+    height: 50vh;
   }
-  .Hero{
+  .Hero {
     height: 45vh;
   }
 }
@@ -119,11 +119,11 @@
   .col {
     font-size: 30px;
   }
-  .collection {
+  .collection-btn {
     font-size: 10px;
     width: 140px;
   }
-  .collection img {
+  .collection-btn img {
     width: 20px;
     height: 10px;
   }
@@ -132,14 +132,14 @@
     height: 30px;
   }
 
-  .Hero{
+  .Hero {
     height: 50vh;
   }
 
-  .hero-right img{
+  .hero-right img {
     height: 40vh;
   }
-  .collection {
+  .collection-btn {
     height: 30px;
   }
 }
@@ -150,11 +150,12 @@
   }
   .hero-right img {
     height: 30vh;
+    margin:auto 0px ;
   }
   .hero-left {
     margin-left: 20px;
   }
-  .collection {
+  .collection-btn {
     margin-top: 5px;
   }
   .new,
@@ -164,32 +165,32 @@
 }
 
 @media (max-width: 350px) {
-  .Hero{
+  .Hero {
     height: 30vh;
   }
   .new,
   .col {
     font-size: 10px;
   }
-  .hero-left h2{
+  .hero-left h2 {
     font-size: 15px;
   }
-  .new img{
+  .new img {
     width: 20px;
     height: 20px;
   }
-  .collection{
+  .collection-btn {
     font-size: 5px;
     width: 70px;
     padding-left: 10px;
     height: 20px;
     gap: 2px;
   }
-  .collection img{
+  .collection-btn img {
     height: 8px;
     width: 10px;
   }
-  .hero-right img{
+  .hero-right img {
     height: 25vh;
     margin-top: 20px;
   }

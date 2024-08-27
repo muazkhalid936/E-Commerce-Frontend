@@ -27,7 +27,8 @@
   background: #252525;
 }
 .popular-item {
-  margin-top: 100px;
+  display: flex;
+flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
 }
@@ -37,11 +38,10 @@
     font-size: 30px;
   }
   .popular {
-    padding: 0px 0px;
-  }
-  .popular-item {
     padding: 0px 50px;
+    margin-top: 5px;
   }
+
   .popular-line {
     width: 100px;
   }
@@ -52,6 +52,6 @@
     font-size: 20px;
   }
   .popular-line {
-    width: 100px;
+    width: 70px;
   }
 }
