@@ -83,6 +83,11 @@
   }
 }
 
+@media(max-width:770px){
+  .offer-right img{
+    width: 140px;
+  }
+}
 @media (max-width: 600px) {
   .offer-left p {
     font-size: 10px;
