@@ -42,3 +42,54 @@
   cursor: pointer;
   width: 30%;
 }
+
+
+@media(max-width:1000px){
+  .newsletter{
+    width: 90%;
+  }
+  .new-email {
+    width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .newsletter {
+    width: 100%;
+    padding: 0px 0px;
+  }
+  .newsletter-h1 {
+    font-size: 20px;
+    padding:0px 20px ;
+    text-align: center;
+  }
+  .newsletter p {
+    font-size: 14px;
+  }
+  .new-email{
+   /* font-size: 10px; */
+    width: 65%;
+  }
+  .new-email input,.new-email button{
+    font-size: 12px;
+  }
+}
+@media (max-width: 330px) {
+  .newsletter {
+    width: 100%;
+    padding: 0px 0px;
+  }
+  .newsletter-h1 {
+    font-size: 18px;
+  }
+  .newsletter p {
+    font-size: 12px;
+  }
+  .new-email{
+   font-size: 10px;
+    width: 80%;
+  }
+  .new-email input,.new-email button{
+    font-size: 10px;
+  }
+}
