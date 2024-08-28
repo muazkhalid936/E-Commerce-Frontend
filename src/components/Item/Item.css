@@ -50,13 +50,14 @@
 
 @media (max-width: 600px) {
   .item {
-    width: 150px;
+    width: 170px;
   }
   .item img {
-    width: 150px;
+    width: 170px;
   }
   .item p {
     font-size: 10px;
+    margin: 0px;
   }
   .new_price,
   .old_price {
