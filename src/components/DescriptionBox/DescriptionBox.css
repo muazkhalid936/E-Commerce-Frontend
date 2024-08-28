@@ -15,25 +15,28 @@
   color: #555;
 }
 
-.desc-desc{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    border: 1px solid #d0d0d0;
-    padding: 48px;
-
+.desc-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border: 1px solid #d0d0d0;
+  padding: 48px;
 }
 
-@media(max-width:320px){
- 
-  .desc-box{
+@media (max-width: 890px) {
+  .desc-box {
+    margin: 10px 20px;
+  }
+}
+@media (max-width: 450px) {
+  .desc-box {
     margin: 50px 20px;
   }
-  .desc-nav-box{
+  .desc-nav-box {
     font-size: 10px;
   }
-  .desc-desc{
+  .desc-desc {
     padding: 20px;
-    font-size: 15px;
+    font-size: 12px;
   }
 }

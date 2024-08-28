@@ -22,9 +22,19 @@
   gap: 30px;
 }
 
-@media(max-width:320px){
+@media(max-width:890px){
   .relatedproduct{
     /* margin-top: 0px; */
     margin: 0px 20px;
+  }
+  .relatedproduct hr{
+    width: 150px;
+    margin: 0px auto;
+    border: 1px solid black;
+    height: 3px;
+  }
+  .relatedproduct h1{
+    font-size: 25px;
+    margin: 0px auto;
   }
 }
