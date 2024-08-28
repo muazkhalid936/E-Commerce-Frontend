@@ -5,7 +5,7 @@ import logo from "../Assets/logo.png";
 import cart_logo from "../Assets/cart_icon.png";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../../context/ShopContext";
-import { IoMenu, IoClose } from "react-icons/io5";
+import { IoMenu, IoClose } from "../../../node_modules/react-icons/io5";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
@@ -120,9 +120,11 @@ const Navbar = () => {
               Kids
             </Link>
           </li>
-          <li  onClick={() => {
+          <li
+            onClick={() => {
               closeSidebar();
-            }}>
+            }}
+          >
             {" "}
             <Link className="link" to={"/LoginSignup"}>
               Login
