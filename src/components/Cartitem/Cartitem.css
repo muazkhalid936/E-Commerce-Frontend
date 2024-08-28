@@ -105,3 +105,9 @@
     margin: auto;
   }
 }
+
+@media (max-width:690px){
+  .cart-billing{
+    flex-direction: column;
+  }
+}
