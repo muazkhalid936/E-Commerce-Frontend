@@ -50,10 +50,10 @@
 
 @media (max-width: 600px) {
   .item {
-    width: 170px;
+    width: 160px;
   }
   .item img {
-    width: 170px;
+    width: 160px;
   }
   .item p {
     font-size: 10px;

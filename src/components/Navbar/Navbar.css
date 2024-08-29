@@ -198,7 +198,7 @@
 @media (max-width: 991.98px) {
   /* CSS styles for medium devices */
   .Navbar {
-    padding: 0px 100px;
+    padding: 0px 30px;
   }
   .nav-list {
     gap: 20px;
@@ -209,7 +209,7 @@
 }
 
 /* Small devices (landscape phones, 576px to 767.98px) */
-@media (max-width: 800px) {
+@media (max-width: 760px) {
   /* CSS styles for small devices */
   .nav-list {
     display: none;
