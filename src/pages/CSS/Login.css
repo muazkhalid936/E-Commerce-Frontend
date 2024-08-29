@@ -1,17 +1,18 @@
 .loginsignup {
   background: #fce3fe;
-  padding-top: 50px;
   height: 80vh;
   width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .login-con {
   width: 580px;
-  height: 600px;
+  height: 500px;
   margin: auto;
   padding: 40px 60px;
   background: white;
-  /* margin: 10px auto; */
 }
 
 .login-fields {
@@ -53,4 +54,99 @@
   color: #5c5c5c;
   gap: 10px;
   align-items: center;
+}
+
+@media (max-width: 1280px) {
+  .loginsignup {
+    height: 90vh;
+  }
+  .login-con {
+    height: 380px;
+    font-size: 10px;
+    width: 350px;
+    padding: 20px 30px;
+  }
+  .login-con h1 {
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+  }
+  .login-fields {
+    gap: 15px;
+    margin-top: 20px;
+  }
+  .login-fields input {
+    font-size: 15px;
+    height: 40px;
+    padding-left: 10px;
+  }
+  .login-con button {
+    font-size: 15px;
+    height: 40px;
+    margin-top: 20px;
+  }
+  .login-login {
+    font-size: 12px;
+  }
+  .login-agree {
+    font-size: 10px;
+    margin-top: -10px;
+    gap: 3px;
+  }
+}
+
+@media (max-width: 840px) {
+  .loginsignup {
+    height: 50vh;
+  }
+  .login-con {
+    padding: 40px 50px;
+    width: 400px;
+  }
+  .login-fields {
+    gap: 20px;
+  }
+  .login-login {
+    font-size: 14px;
+  }
+  .login-agree {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 780px) {
+  .loginsignup {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 430px) {
+  .login-con {
+    width: 70%;
+    height: auto;
+    padding: 20px 30px;
+  }
+  .login-fields {
+    gap: 10px;
+  }
+  .login-fields input {
+    width: 90%;
+    height: 35px;
+    font-size: 14px;
+  }
+  .login-con button {
+    width: 40%;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .login-agree {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .loginsignup {
+    height: auto;
+    padding: 40px 0px;
+  }
 }
