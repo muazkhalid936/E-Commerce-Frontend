@@ -114,9 +114,12 @@
   }
 }
 
-@media (max-width: 5000px) {
+@media (max-width: 500px) {
   .cart-down h2 {
     font-size: 15px;
+  }
+  .cart-line{
+    display: none;
   }
   .cart-format{
     grid-template-columns:  0.5fr 3fr 0.5fr ;

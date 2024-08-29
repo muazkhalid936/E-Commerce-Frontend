@@ -22,7 +22,7 @@ const Cartitem = () => {
         </div>
       </b>
 
-      <hr />
+      <hr  className="cart-line"/>
       {all_product.map((e) => {
         if (cartItem[e.id] > 0) {
           return (
