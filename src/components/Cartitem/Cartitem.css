@@ -98,16 +98,42 @@
     padding: 10px 0px;
   }
   .cart-down {
-  
-  flex: 1;
+    flex: 1;
   }
   .cart-promocode {
     margin: auto;
   }
 }
 
-@media (max-width:690px){
-  .cart-billing{
+@media (max-width: 690px) {
+  .cart-billing {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 320px) {
+  .cart-down h2 {
+    font-size: 15px;
+  }
+  .cart-totals {
+    font-size: 12px;
+  }
+  .cart-proceed {
+    font-size: 8px;
+    padding: 10px 15px;
+    /* margin: 10px auto; */
+  }
+  .cart-promocode {
+    font-size: 10px;
+    margin: 0px;
+  }
+  .cart-promo input {
+    font-size: 12px;
+    width: 150px;
+    padding: 10px;
+  }
+  .promo-btn {
+    font-size: 12px;
+    padding: 10px;
   }
 }
