@@ -104,6 +104,7 @@ const Cartitem = () => {
         draggable
         pauseOnHover={false}
         theme="light"
+        className="toast-con"
         transition={Bounce}
       />
     </div>

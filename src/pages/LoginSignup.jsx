@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./CSS/Login.css";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { MdWindPower } from "react-icons/md";
 
 const LoginSignup = () => {
   const [state, setState] = useState("Login");
@@ -22,7 +23,7 @@ const LoginSignup = () => {
       // Handle successful login (e.g., redirect, store token, etc.)
       toast.success("Logged in Successfully", {
         position: "bottom-right",
-        autoClose: 4000,
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: false,
@@ -31,10 +32,16 @@ const LoginSignup = () => {
         theme: "light",
         transition: Bounce,
       });
+
+      localStorage.setItem("auth-token", result.token);
+      // console.log(localStorage.getItem("auth-token"));
+     setTimeout(()=>{
+      window.location.replace("/");
+     },3000)
     } else {
-      toast.error(result.error, {
+      toast.error(`${result.error}`, {
         position: "bottom-left",
-        autoClose: 4000,
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -59,7 +66,7 @@ const LoginSignup = () => {
       // Handle successful signup (e.g., redirect, store token, etc.)
       toast.success("Sign up Successfully", {
         position: "bottom-right",
-        autoClose: 4000,
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: false,
@@ -68,10 +75,15 @@ const LoginSignup = () => {
         theme: "light",
         transition: Bounce,
       });
+
+      localStorage.setItem("auth-token", result.token);
+      setTimeout(()=>{
+        window.location.replace("/");
+       },3000)
     } else {
-      toast.error(`${result.errors}`, {
+      toast.error(`${result.error}`, {
         position: "bottom-right",
-        autoClose: 4000,
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -138,7 +150,7 @@ const LoginSignup = () => {
         </div>
         <ToastContainer
           position="bottom-right"
-          autoClose={4000}
+          autoClose={3000}
           hideProgressBar={false}
           newestOnTop={false}
           closeOnClick

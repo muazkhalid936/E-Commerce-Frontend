@@ -59,9 +59,23 @@ const Navbar = () => {
         </ul>
 
         <div className="nav-login">
-          <Link to={"/LoginSignup"}>
-            <button className="nav-login-btn">Login</button>
-          </Link>
+          {localStorage.getItem("auth-token") ? (
+            <Link>
+              <button
+                onClick={() => {
+                  localStorage.removeItem("auth-token");
+                  window.location.replace("/");
+                }}
+                className="nav-login-btn"
+              >
+                Logout
+              </button>
+            </Link>
+          ) : (
+            <Link to={"/LoginSignup"}>
+              <button className="nav-login-btn">Login</button>
+            </Link>
+          )}
           <Link to={"/Cart"}>
             <img src={cart_logo} className="cart" alt="Cart" />
           </Link>
@@ -125,10 +139,23 @@ const Navbar = () => {
               closeSidebar();
             }}
           >
-            {" "}
-            <Link className="link" to={"/LoginSignup"}>
-              Login
-            </Link>
+            {localStorage.getItem("auth-token") ? (
+              <Link
+                className="link"
+                onClick={() => {
+                  localStorage.removeItem(
+                    "auth-token",
+                    window.location.replace("/")
+                  );
+                }}
+              >
+                Logout
+              </Link>
+            ) : (
+              <Link className="link" to={"/LoginSignup"}>
+                Login
+              </Link>
+            )}
           </li>
         </ul>
       </div>

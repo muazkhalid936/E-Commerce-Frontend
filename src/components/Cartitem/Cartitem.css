@@ -100,8 +100,8 @@
   .cart-down {
     flex: 1;
   }
-  .cart-format{
-    grid-template-columns:  0.5fr 3fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  .cart-format {
+    grid-template-columns: 0.5fr 3fr 0.5fr 0.5fr 0.5fr 0.5fr;
   }
   .cart-promocode {
     margin: auto;
@@ -118,14 +118,15 @@
   .cart-down h2 {
     font-size: 15px;
   }
-  .cart-line{
+
+  .cart-line {
     display: none;
   }
-  .cart-format{
-    grid-template-columns:  0.5fr 3fr 0.5fr ;
+  .cart-format {
+    grid-template-columns: 0.5fr 3fr 0.5fr;
     gap: 10px;
   }
-  .cart-item-main{
+  .cart-item-main {
     display: none;
   }
   .cart-totals {
