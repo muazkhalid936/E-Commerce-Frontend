@@ -33,27 +33,27 @@ const Navbar = () => {
         </div>
         <ul className="nav-list">
           <li onClick={() => setMenu("shop")}>
-            <Link className="link" to={"/"}>
+            <a className="link" href={"/"}>
               Shop
-            </Link>
+            </a>
             {menu === "shop" && <hr />}
           </li>
           <li onClick={() => setMenu("men")}>
-            <Link className="link" to={"/Men"}>
+            <a className="link" href={"/Men"}>
               Men
-            </Link>
+            </a>
             {menu === "men" && <hr />}
           </li>
           <li onClick={() => setMenu("women")}>
-            <Link className="link" to={"/Women"}>
+            <a className="link" href={"/Women"}>
               Women
-            </Link>
+            </a>
             {menu === "women" && <hr />}
           </li>
           <li onClick={() => setMenu("kids")}>
-            <Link className="link" to={"/kids"}>
+            <a className="link" href={"/kids"}>
               Kids
-            </Link>
+            </a>
             {menu === "kids" && <hr />}
           </li>
         </ul>

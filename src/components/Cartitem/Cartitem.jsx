@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import "./Cartitem.css";
 import remove_icon from "../Assets/cart_cross_icon.png";
 import { ShopContext } from "../../context/ShopContext";
+import { Bounce, toast, ToastContainer } from "react-toastify";
 
 const Cartitem = () => {
-  const { getTotalAmount, all_product, cartItem, addToCart, removeFromCart } =
+  const { getTotalAmount, all_product, cartItem, removeFromCart } =
     useContext(ShopContext);
   console.log(cartItem, "as");
   return (
@@ -22,13 +23,13 @@ const Cartitem = () => {
         </div>
       </b>
 
-      <hr  className="cart-line"/>
+      <hr className="cart-line" />
       {all_product.map((e) => {
         if (cartItem[e.id] > 0) {
           return (
             <div>
               <div className="cart-format">
-                <img src={e.image} className="cart-icon" />
+                <img src={e.image} className="cart-icon" alt="" />
                 <p>{e.name}</p>
                 <p>${e.new_price}</p>
                 <button className="cart-quantity">{cartItem[e.id]}</button>
@@ -37,6 +38,18 @@ const Cartitem = () => {
                   src={remove_icon}
                   onClick={() => {
                     removeFromCart(e.id);
+
+                    toast.error("Product Removed", {
+                      position: "bottom-right",
+                      autoClose: 4000,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      theme: "light",
+                      transition: Bounce,
+                    });
                   }}
                   className="cart-remove"
                 />
@@ -80,6 +93,19 @@ const Cartitem = () => {
           </div>
         </div>
       </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        theme="light"
+        transition={Bounce}
+      />
     </div>
   );
 };

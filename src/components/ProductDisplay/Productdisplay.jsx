@@ -3,6 +3,8 @@ import "./ProductDisplay.css";
 import star from "../Assets/star_icon.png";
 import star_dull from "../Assets/star_dull_icon.png";
 import { ShopContext } from "../../context/ShopContext";
+import { Bounce, ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Productdisplay = (props) => {
   const { product } = props;
 
@@ -57,6 +59,18 @@ const Productdisplay = (props) => {
         <button
           onClick={() => {
             addToCart(product.id);
+
+            toast.success("Added to cart", {
+              position: "bottom-right",
+              autoClose: 4000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              transition: Bounce,
+            });
           }}
         >
           ADD TO CART
@@ -78,6 +92,19 @@ const Productdisplay = (props) => {
           </p>
         </div>
       </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        theme="light"
+        transition={Bounce}
+      />
     </div>
   );
 };
