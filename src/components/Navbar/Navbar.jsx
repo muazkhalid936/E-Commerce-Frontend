@@ -1,16 +1,17 @@
 "use client";
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./Navbar.css";
 import logo from "../Assets/logo.png";
 import cart_logo from "../Assets/cart_icon.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ShopContext } from "../../context/ShopContext";
-import { IoMenu, IoClose } from "../../../node_modules/react-icons/io5";
+import { IoMenu, IoClose } from "react-icons/io5";
 
 const Navbar = () => {
-  const [menu, setMenu] = useState("shop");
+  const [menu, setMenu] = useState("");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const { getTotalCartItem } = useContext(ShopContext);
+  const location = useLocation();
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -19,6 +20,20 @@ const Navbar = () => {
   const closeSidebar = () => {
     setIsSidebarOpen(false);
   };
+
+  // Set the menu item based on the current path
+  useEffect(() => {
+    const path = location.pathname;
+    if (path === "/Men") {
+      setMenu("men");
+    } else if (path === "/Women") {
+      setMenu("women");
+    } else if (path === "/kids") {
+      setMenu("kids");
+    } else {
+      setMenu("shop");
+    }
+  }, [location]);
 
   return (
     <>
@@ -33,25 +48,25 @@ const Navbar = () => {
         </div>
         <ul className="nav-list">
           <li onClick={() => setMenu("shop")}>
-            <a className="link" href={"/"}>
+            <a className="link" href="/">
               Shop
             </a>
             {menu === "shop" && <hr />}
           </li>
           <li onClick={() => setMenu("men")}>
-            <a className="link" href={"/Men"}>
+            <a className="link" href="/Men">
               Men
             </a>
             {menu === "men" && <hr />}
           </li>
           <li onClick={() => setMenu("women")}>
-            <a className="link" href={"/Women"}>
+            <a className="link" href="/Women">
               Women
             </a>
             {menu === "women" && <hr />}
           </li>
           <li onClick={() => setMenu("kids")}>
-            <a className="link" href={"/kids"}>
+            <a className="link" href="/kids">
               Kids
             </a>
             {menu === "kids" && <hr />}
@@ -72,11 +87,11 @@ const Navbar = () => {
               </button>
             </Link>
           ) : (
-            <Link to={"/LoginSignup"}>
+            <Link to="/LoginSignup">
               <button className="nav-login-btn">Login</button>
             </Link>
           )}
-          <Link to={"/Cart"}>
+          <Link to="/Cart">
             <img src={cart_logo} className="cart" alt="Cart" />
           </Link>
           <div className="counter">{getTotalCartItem()}</div>
@@ -100,7 +115,7 @@ const Navbar = () => {
               closeSidebar();
             }}
           >
-            <Link className="link" to={"/"}>
+            <Link className="link" to="/">
               Shop
             </Link>
           </li>
@@ -110,7 +125,7 @@ const Navbar = () => {
               closeSidebar();
             }}
           >
-            <Link className="link" to={"/Men"}>
+            <Link className="link" to="/Men">
               Men
             </Link>
           </li>
@@ -120,7 +135,7 @@ const Navbar = () => {
               closeSidebar();
             }}
           >
-            <Link className="link" to={"/Women"}>
+            <Link className="link" to="/Women">
               Women
             </Link>
           </li>
@@ -130,7 +145,7 @@ const Navbar = () => {
               closeSidebar();
             }}
           >
-            <Link className="link" to={"/kids"}>
+            <Link className="link" to="/kids">
               Kids
             </Link>
           </li>
@@ -152,7 +167,7 @@ const Navbar = () => {
                 Logout
               </Link>
             ) : (
-              <Link className="link" to={"/LoginSignup"}>
+              <Link className="link" to="/LoginSignup">
                 Login
               </Link>
             )}
