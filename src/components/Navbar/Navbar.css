@@ -7,9 +7,7 @@
   /* margin-top: 5px;
   margin-bottom: 5px; */
 }
-.nav-list li Link {
-  color: black;
-}
+
 .nav-logo img {
   width: 60px;
 }
@@ -36,6 +34,7 @@
 
 .link {
   text-decoration: none;
+  color: black;
 }
 .nav-list hr {
   color: red;
